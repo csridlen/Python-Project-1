@@ -16,3 +16,5 @@
 
 [Traffic Crashes - Crashes | City of Chicago | Data Portal](https://data.cityofchicago.org/Transportation/Traffic-Crashes-Crashes/85ca-t3if)
 ### Demographics Data
+
+## Notes/Ideas
