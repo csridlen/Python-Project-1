@@ -1,6 +1,5 @@
 # Python-Project-1
 
-## Add notes here
 ### Main Dataset
 
 [311 Service Requests - Pot Holes Reported - Historical | City of Chicago | Data Portal](https://data.cityofchicago.org/Service-Requests/311-Service-Requests-Pot-Holes-Reported-Historical/7as2-ds3y)
@@ -17,4 +16,4 @@
 [Traffic Crashes - Crashes | City of Chicago | Data Portal](https://data.cityofchicago.org/Transportation/Traffic-Crashes-Crashes/85ca-t3if)
 ### Demographics Data
 
-## Notes/Ideas
+## Comments/Ideas
