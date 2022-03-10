@@ -23,8 +23,14 @@ ACS Mean Income Estimates (2011-2017): https://docs.google.com/spreadsheets/d/1-
 2. Ideas for actual dataset:
   1. Completion duration
   2. Which months/times of year have more potholes?
-3. Ideas for working with other 
-4. Get city of chicago zipcodes shapefile cityofchicago.org boundaries - zipcodes
-  1. Download **shapefile
+3. Ideas for working with other datasets
+  1. Income areas with most potholes
+  2. Income areas that get their potholes fixed the fastest
+5. Get city of chicago zipcodes shapefile cityofchicago.org boundaries - zipcodes
+  1. Download **shapefile**
   2. plotting shapefiles: https://gis.stackexchange.com/questions/131716/plot-shapefile-with-matplotlib
-  
+
+
+## Delegation
+1. Alice will do work with `shapely` -- finding zipcodes
+2. Once we have zipcodes we can merge more datasets
