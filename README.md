@@ -32,5 +32,8 @@ ACS Mean Income Estimates (2011-2017): https://docs.google.com/spreadsheets/d/1-
 
 
 ## Delegation
-1. Alice will do work with `shapely` -- finding zipcodes
-2. Once we have zipcodes we can merge more datasets
+1. Work with `shapely` -- finding zipcodes for traffic crashes - Alice
+2. Map potholes by zipcode - Victor and Fjolle
+3. Looking for crime data - Steven
+4. Summary statistics 
+5. Traffic data and pothole data are too big and import data - Brendan 
