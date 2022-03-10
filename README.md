@@ -35,5 +35,5 @@ ACS Mean Income Estimates (2011-2017): https://docs.google.com/spreadsheets/d/1-
 1. Work with `shapely` -- finding zipcodes for traffic crashes - Alice
 2. Map potholes by zipcode - Victor and Fjolle
 3. Looking for crime data - Steven
-4. Summary statistics 
+4. Summary statistics - Abby and Christina
 5. Traffic data and pothole data are too big and import data - Brendan 
