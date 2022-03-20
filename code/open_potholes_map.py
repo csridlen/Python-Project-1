@@ -19,7 +19,7 @@ potholes = potholes.drop_duplicates(subset=['SERVICE REQUEST NUMBER'])
 
 
 # For open potholes, you might want to check out which areas have had service requests opened for the longest time.
-open_potholes.loc[open_potholes['STATUS'] == 'Open']
+open_potholes = potholes.loc[potholes['STATUS'] == 'Open']
 open_potholes['DAYS_OPEN'] = (pd.to_datetime('today').normalize() - potholes['CREATION DATE']).dt.days
 
 # Interestingly, the average time that these service requests have been open are much longer than the average time it takes to complete a pothole.
