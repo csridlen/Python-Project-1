@@ -1,10 +1,11 @@
 import pandas as pd
+import plotly
 import plotly.express as px
 from datetime import date
 
 
-potholes_1 = pd.read_csv("Python-Project-1/data/potholes_1.csv")
-potholes_2 = pd.read_csv("Python-Project-1/data/potholes_1.csv")
+potholes_1 = pd.read_csv("data/potholes_1.csv")
+potholes_2 = pd.read_csv("data/potholes_1.csv")
 potholes = pd.concat([potholes_1, potholes_2], ignore_index=True)
 
 # This converts the creation and completion dates to datetime format so that you can measure time between the two.
@@ -32,3 +33,6 @@ fig = px.scatter_mapbox(open_potholes, lat="LATITUDE", lon="LONGITUDE", mapbox_s
                         range_color=[0, open_potholes['TIME_TO_COMPLETE'].quantile(0.95)],
                         height=700, zoom=9)
 fig.show()
+
+#saves the plot
+plotly.offline.plot(fig, filename='artifacts/open_potholes.html')
