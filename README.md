@@ -20,7 +20,6 @@ In the following two plots, the per capita income of the neighborhoods with the 
 ![Plot 2](artifacts/top_5.png)
 ![Plot 3](artifacts/bottom_5.png)
 
-
 ## Analysing the Pothole data and Income Data for the Chicago area: 
 To see the code for this part of the analysis, please refer to the following [link](Data_Cleaning/pothole_data/Pothole_data.ipynb). This uses Pothole [data](data/potholes_1.csv) from the Chicago area.
 Through this code I perform some simple data cleaning commands for the Potholes dataset by changing messy names of columns, sorting some of the variables by first name and dropping duplicate values. I also replace missing values for the numberical columns with either the mean, mode, the value of zero, or a prespecified value. I check to make sure that none of the columns have any null entries in them. The I go ahead and perform some simple statistics for the pothole data to show the mean, std, min, max and the 25%, 50% and 75% quantiles for each variable in the dataset. I create a [correlation table](artifacts/PotholeData_statistics.png) among variables in the dataset, and lastly, I create a [scatterplot](artifacts/Scatter_plot.png) that shows Number of Potholes in Block by Creation Date. 
@@ -29,3 +28,9 @@ I also look at the income [data](data/chicago_census_data.csv) in the Chicago ar
 ![Plot 4](artifacts/PotholeData_statistics.png)
 ![Plot 5](artifacts/Scatter_plot.png)
 ![Plot 6](artifacts/pothole_income_regression.png)
+
+## Analysis: Arrests and Potholes
+The code used for the analysis can be found [here](code/arrestdata.ipynb).
+The motivation was that for each police district, there might be more intense activities where the arrests happen more which might lead to increased numbers of potholes. As the arrest data was available for 2014-2017, I focused on the years of 2014-2017 in the potholes data. I grouped the data and counted all the arrests and created potholes in those years and plotted them by police districts.
+![Plot 7](artifacts/arrests_and_potholes.png)
+Unfortunately, it does not seem they are closely correlated.
