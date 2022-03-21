@@ -1,4 +1,6 @@
 import pandas as pd
+
+### Potholes data
 potholes_1 = pd.read_csv("data/potholes_1.csv")
 # print(pd.unique(potholes["SSA"]) i used this to return unique values from a specific column
 
@@ -26,3 +28,21 @@ potholes_dict = {
 }
 potholes_data_dictionary = pd.DataFrame.from_dict(potholes_dict)
 potholes_data_dictionary.to_csv("data/potholes_data_dictionary.csv", index=False)
+
+
+### Traffic crash data
+crashes_1 = pd.read_csv("data/crashes_1.csv")
+crashes_dict = {
+    'Columns' : list(crashes_1.columns),
+    'Description' : ['id of crash, unique',
+                     'date and time of crash',
+                     'road defects, as determined by reporting officer',
+                     'latitude',
+                     'longitude',
+                     '(latitude, longitude)'],
+}
+
+crash_data_dictionary = pd.DataFrame.from_dict(crashes_dict)
+crash_data_dictionary.to_csv("data/crash_data_dictionary.csv", index=False)
+
+# detailed descriptions of omitted columns can be found https://data.cityofchicago.org/Transportation/Traffic-Crashes-Crashes/85ca-t3if
