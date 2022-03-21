@@ -32,7 +32,8 @@ fig = px.scatter_mapbox(open_potholes, lat="LATITUDE", lon="LONGITUDE", mapbox_s
                         color_continuous_scale=["green", 'blue', 'red', 'gold'],
                         range_color=[0, open_potholes['TIME_TO_COMPLETE'].quantile(0.95)],
                         height=700, zoom=9)
-fig.show()
+#fig.show()
 
 #saves the plot
 plotly.offline.plot(fig, filename='artifacts/open_potholes.html')
+fig.write_image("artifacts/open_potholes.png")
