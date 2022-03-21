@@ -1,0 +1,7 @@
+Columns,Description
+CRASH_RECORD_ID,"id of crash, unique"
+CRASH_DATE,date and time of crash
+ROAD_DEFECT,"road defects, as determined by reporting officer"
+LATITUDE,latitude
+LONGITUDE,longitude
+LOCATION,"(latitude, longitude)"
