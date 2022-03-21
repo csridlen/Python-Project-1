@@ -20,3 +20,8 @@ In the following two plots, the per capita income of the neighborhoods with the 
 ![Plot 2](artifacts/top_5.png)
 ![Plot 3](artifacts/bottom_5.png)
 
+## Analysis: Arrests and Potholes
+The code used for the analysis can be found [here](code/arrestdata.ipynb).
+The motivation was that for each police district, there might be more intense activities where the arrests happen more which might lead to increased numbers of potholes. As the arrest data was available for 2014-2017, I focused on the years of 2014-2017 in the potholes data. I grouped the data and counted all the arrests and created potholes in those years and plotted them by police districts.
+![Plot 4](artifacts/arrests_and_potholes.png)
+Unfortunately, it does not seem they are closely correlated.
