@@ -22,14 +22,14 @@ In the following two plots, the per capita income of the neighborhoods with the 
 
 ## Analysing the Pothole data and Income Data for the Chicago area: 
 To see the code for this part of the analysis, please refer to the following [link](Data_Cleaning/pothole_data/Pothole_data.ipynb). This uses `Pothole Data` from the Chicago area.
-I perform some simple data cleaning commands for the Potholes dataset by changing messy names of columns, sorting some of the variables by first name, and dropping duplicate values. I also replace missing values for the numberical columns with either the mean, mode, the zero value, or a pre-specified value. I check to make sure that none of the columns have any null entries in them. The I go ahead and perform some simple statistics for the pothole data to show the mean, standard deviation, min, max and the 25%, 50% and 75% quantiles for each variable in the dataset. I create a correlation table among variables in the dataset. 
-![table 1](artifacts/PotholeData_statistics.png)  
-Lastly, I create a scatterplot that shows the Number of Potholes in Block by Creation Date.  
-[Plot 4](artifacts/Scatter_plot.png) 
+I perform some simple data cleaning commands for the Potholes dataset by changing messy names of columns, sorting some of the variables by first name, and dropping duplicate values. I also replace missing values for the numberical columns with either the mean, mode, the zero value, or a pre-specified value. I check to make sure that none of the columns have any null entries in them. The I go ahead and perform some simple statistics for the pothole data to show the mean, standard deviation, min, max and the 25%, 50% and 75% quantiles for each variable in the dataset. I create a correlation table among variables in the dataset. Lastly, I create a scatterplot that shows the Number of Potholes in Block by Creation Date.  
 
 I also look at the `Income Data` in the Chicago area by first merging it with the `Pothole Data`. I perform a simple regression between the `The Number of Potholes in Block` as the dependent variable and the `Per Capita Income` and `Hardship Index` as the independent variables. The result is the following 
-![Table 2](artifacts/pothole_income_regression.png). 
 In this table we see that a one unit increase in per capita income leads to a decrease of approximately 2.9 units in the number of potholes in the block, a coefficient which is statistically significant. Similarly, we see that a one unit increase in the hardship index leads to a decrease of approximately 0.001 in the number of potholes in the block, a coefficient which is nonetheless not statistically significant.
+
+![Table 1](artifacts/PotholeData_statistics.png) 
+![Plot 4](artifacts/Scatter_plot.png) 
+![Table 2](artifacts/pothole_income_regression.png). 
 
 ## Analysis: Arrests and Potholes
 The code used for the analysis can be found [here](code/arrestdata.ipynb).
