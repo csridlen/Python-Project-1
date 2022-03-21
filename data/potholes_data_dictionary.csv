@@ -1,0 +1,20 @@
+Columns,Description
+CREATION DATE,date service request was created
+STATUS,status of the request
+COMPLETION DATE,date service request has been resolved
+SERVICE REQUEST NUMBER,id of service request
+TYPE OF SERVICE REQUEST,type of service request (only potholes in this data set)
+CURRENT ACTIVITY,work being done currently (null if none)
+MOST RECENT ACTION,latest activity done on request
+NUMBER OF POTHOLES FILLED ON BLOCK,number of potholes filled on block
+STREET ADDRESS,street address
+ZIP,zipcode
+X COORDINATE,x coordinate
+Y COORDINATE,y coordinate
+Ward,ward (there are 50 in chicago)
+Police District,police district
+Community Area,community area of chicago used for statistical and planning purposes
+SSA,special service area (tax district)
+LATITUDE,latitude
+LONGITUDE,longitude
+LOCATION,"(latitude, longitude)"
