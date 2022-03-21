@@ -29,6 +29,8 @@ ACS Mean Income Estimates (2011-2017): https://docs.google.com/spreadsheets/d/1-
 ### Arrest Data
 [Public Arrest Data | Chicago Police Department](https://home.chicagopolice.org/statistics-data/public-arrest-data/)
 
+### Crime Data
+[Chicago Crime Data](https://data.cityofchicago.org/Public-Safety/Crimes-2001-to-Present/ijzp-q8t2/data)
 
 ## Comments/Ideas
 1. Use `geopy` to match street names from traffic dataset to zip codes
