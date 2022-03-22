@@ -14,9 +14,10 @@ For this analysis, the main source of data contains potholes reported through 3-
 - [Arrest](data/arrest_data_dictionary.csv)
 
 ## Data Limitations and extensions
-There is no recent data in potholes in the Chicago area that we could find; 
-Linkage of crashes to potholes through latitude and longitude and time stamps would be needed to provide a clearer methodology; 
+We could not find recent data for the potholes in the Chicago area; 
 The were a lot of missing data in the Pothole dataset; 
+We could not find data on Chicago Area arrests for years 2010-2013 and 2018. So, we focused our pothole-arrest analysis on years 2014-2017; 
+Linkage of crashes to potholes through latitude and longitude and time stamps would be needed to provide a clearer methodology; 
 
 ## Analysis: Seasonality by Neighborhood 
 Before considering external influences, we need to understand what kind of general wear and tear likely causes potholes in Chicago. This analysis can be found [here](code/potholes_by_month.ipynb). The first bar plot below shows the total number of potholes created in each month. We can see that the top three months with potholes created are February, March, and April. The second bar plot below shows the month with the highest number of potholes created for each community area. Once again, we can see across the community areas that February, March, and April are the most common months with the most potholes created. This tells us that Chicago pothole are mostly created in the spring, which makes sense when we consider the hard winters that Chicago experiences and the damage created by the freezing, thawing, and plowing of the roads. 
