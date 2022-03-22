@@ -1,2 +1,3 @@
-install plotly and plotly.express with pip install plotly.express
-install kaleido with pip install kaleido
+install nb_black with `$ pip install nb_black`
+install plotly and plotly.express with `$ pip install plotly.express`
+install kaleido with `$ pip install kaleido`
