@@ -45,12 +45,6 @@ Expanding on our analysis of income, we take a further look into how total potho
 
 ![Plot 7](artifacts/counts_by_income.png)
 
-
-## Analysis: Potholes vs. Income for the Chicago Area
-To see the code for this part of the analysis, please refer to the following [link](Data_Cleaning/pothole_data/Pothole_data.ipynb). This uses `Pothole Data` from the Chicago area.
-We perform some simple data cleaning commands for the Potholes dataset by changing messy names of columns, sorting some of the variables by first name, and dropping duplicate values. We also replace missing values for the numerical columns with either the mean, mode, the zero value, or a pre-specified value. We check to make sure that none of the columns have any null entries in them. The we perform some simple statistics for the pothole data to show the mean, standard deviation, min, max and the 25%, 50% and 75% quantiles for each variable in the dataset. We create a correlation table among variables in the dataset.  
-![Table 1](artifacts/PotholeData_statistics.png)
-
 ## Analysis: Potholes vs. Traffic Crashes
 In this analysis, we attempt to visualize the density of potholes and traffic crashes due to road defects. The traffic crash data was obtained from the City of Chicago and the Chicago Police Department and was filtered to only include crashes during the 2010 - 2018 timeframe that were caused by rut or hole road defects. These were then plotted alongside potholes (both open and completed) over the neighborhood map. From the plot below, we can see that certain neighborhoods, particularly in the Northwest and Southwest regions, have a high percentage of both potholes and traffic crashes, ostensibly a significant portion of which were directly caused by potholes. Further rigorous analysis including linkage of crashes to potholes through latitude and longitude and time stamps would provide a clearer methodology to investigate how potholes affect public health across neighborhoods.  
 ![Plot 9](artifacts/dualmap.png)
@@ -68,10 +62,6 @@ The results for the first regression clearly indicate significant effects for cr
 The results for the second regression indicate only a significant effect for population density, and a fairly low R-squared of about 0.16, indicating that contrarily to our intuition, the factors chose were not very relevant predictors of pothole servicing time.
 ![Table 4](artifacts/reg2.png)
 
-We also look at the `Income Data` in the Chicago area by first merging it with the `Pothole Data`. We perform a simple regression between the `The Number of Potholes in Block` as the dependent variable and the `Per Capita Income` and `Hardship Index` as the independent variables.
-In this table we can see that a one percent increase in per capita income leads to a decrease of approximately 2.9 units in the number of potholes in the block, a coefficient which is statistically significant. Similarly, we see that a one unit increase in the hardship index leads to a decrease of approximately 0.001 in the number of potholes in the block, a coefficient which is nonetheless not statistically significant. The R-squared for this test,  can be considered as very low, so we need to be very careful drawing any dependable conclusions from it. 
-
-![Table 2](artifacts/pothole_income_regression.png)
-
 ## Conclusion
 
+Through our analysis we have explored the factors that generally influence road quality in the Chicago area from 2010 to 2018. We, unsurprisingly find that months coming from winter see most potholes created as compared to other months throghout the year. We find that certain neighborhoods within the Chicago Area had more potholes than others. However, we also realize that this may just be due to more pothole services being requested in those specific neighborhoods. Further, we look into the time it takes for potholes to be services,  and find that it takes much longer for the Northwest of Chicago poholes to be fixed than for other areas of Chicago. Our analysis shows that neighborhoods with higher income have longer completion time, which is counterintuitive.  We also look at any potential correlation between potholes and traffic crashes. We observe a positive correlation between potholes and traffic crashes for the Northwest and Southwest regions. We do not find any statistically significant correlation between the number of arrests and the number of potholes. Lastly, we run a regression analysis to show the relation between potholes with other social factors and we do not find any relevant predictors for pothole servicing time. 
