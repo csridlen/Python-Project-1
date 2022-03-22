@@ -4,14 +4,6 @@
 
 Intuition tells us that potholes are simply due to wear and tear of roads through general use over time. However, what if other external factors influence potholes and overall road quality? In this analysis, we seek to uncover what influences, outside of general wear and tear, affect road quality. We focus our analysis on Chicago, IL and explore the potential effect that income, neighborhood, traffic, and arrests have on potholes in the city. 
 
-Before considering external influences, we need to understand what kind of general wear and tear likely causes potholes in Chicago. This analysis can be found [here](code/potholes_by_month.ipynb). The first bar plot below shows the total number of potholes created in each month. We can see that the top three months with potholes created are February, March, and April. The second bar plot below shows the month with the highest number of potholes created for each community area. Once again, we can see across the community areas that February, March, and April are the most common months with the most potholes created. This tells us that Chicago pothole are mostly created in the spring, which makes sense when we consider the hard winters that Chicago experiences and the damage created by the freezing, thawing, and plowing of the roads. 
-
-![Plot 1](artifacts/counts_by_month.png)
-
-![Plot 2](artifacts/top_months.png)
-
-Now that we understand the baseline seasonal cause of potholes in Chicago, we can explore how other factors may exacerbate this damage. 
-
 ## Data Collection
 For this analysis, the main source of data contains potholes reported through 3-1-1 service requests in the city of Chicago, IL from 2010 through 2018. The data was made available by the City of Chicago, along with data on traffic crashes reported through the electronic crash reporting system under the jurisdiction of the Chicago Police Department. Additionally, income data by neighborhood was sourced from the U.S. Census Bureau to analyze the correlation between pothole repairs and surrounding household residential income, and arrest data from the Chicago Police Department was used to investigate geographic relationships between density of potholes and surrounding area criminal activity.
 
@@ -20,6 +12,15 @@ For this analysis, the main source of data contains potholes reported through 3-
 - [Traffic Crashes](data/crash_data_dictionary.csv)
 - [Census](data/census_data_dictionary.csv )
 - [Arrest](data/arrest_data_dictionary.csv)
+
+## Analysis: Seasonality by Neighborhood 
+Before considering external influences, we need to understand what kind of general wear and tear likely causes potholes in Chicago. This analysis can be found [here](code/potholes_by_month.ipynb). The first bar plot below shows the total number of potholes created in each month. We can see that the top three months with potholes created are February, March, and April. The second bar plot below shows the month with the highest number of potholes created for each community area. Once again, we can see across the community areas that February, March, and April are the most common months with the most potholes created. This tells us that Chicago pothole are mostly created in the spring, which makes sense when we consider the hard winters that Chicago experiences and the damage created by the freezing, thawing, and plowing of the roads. 
+
+![Plot 1](artifacts/counts_by_month.png)
+
+![Plot 2](artifacts/top_months.png)
+
+Now that we understand the baseline seasonal cause of potholes in Chicago, we can explore how other factors may exacerbate this damage. 
 
 ## Analysis: Pothole Status by Neighborhood
 To visualize pothole service request status geographically, a map was created plotting open versus completed pothole requests in the Chicago area. A basemap of Chicago neighborhoods was used to analyze any correlation and provide visual context to the income analysis explore below. As seen on the map, there do appear to be neighborhoods with a higher ratio of open to closed pothole service requests, although more rigorous analysis is needed to determine an exact relationship. For example, a neighborhood may appear to have a higher concentration of open requests, however, due to the sheer volume of completed requests over the time frame, it is difficult to visually determine the true ratio.
