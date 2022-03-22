@@ -27,7 +27,7 @@ In the following two plots, the per capita income of the neighborhoods with the 
 ![Plot 2](artifacts/top_5.png)
 ![Plot 3](artifacts/bottom_5.png)
 
-To further this analysis, a scatterplot was created with `Per Capita Income` on the x-axis and `Completion Time` on the y-axis ![Plot 1](artifacts/income_scatter.png).
+To further this analysis, a scatterplot was created with `Per Capita Income` on the x-axis and `Completion Time` on the y-axis: ![Plot 1](artifacts/income_scatter.png)
 In the scatterplot, the color scale is by number of potholes, with the darkest points having the fewest number of potholes and the lighest points having the most potholes in that community zone. We see that in areas with the lowest incomes, even having a smaller number of potholes than in richer areas results in a slower average completion time.
 
 ## Analysis: Potholes vs. Income for the Chicago Area 
