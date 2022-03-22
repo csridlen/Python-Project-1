@@ -1,4 +1,4 @@
-# Chicago Potholes Data (2011 - 2018)
+# Potholes in Chicago (2011 - 2018)
 
 ## Introduction
 
