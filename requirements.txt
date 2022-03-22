@@ -1,3 +1,6 @@
 install nb_black with `$ pip install nb_black`
 install plotly and plotly.express with `$ pip install plotly.express`
 install kaleido with `$ pip install kaleido`
+install plotly with `$ pip install plotly`
+install shapely with `$ pip install shapely`
+install geopandas with `$ pip install geopandas`
