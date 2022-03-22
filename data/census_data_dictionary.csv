@@ -1,0 +1,10 @@
+Columns,Description
+Community Area Number,community area of chicago used for statistical and planning purposes
+COMMUNITY AREA NAME,name of community area
+PERCENT OF HOUSING CROWDED,percent occupied housing units with more than one person per room
+PERCENT HOUSEHOLDS BELOW POVERTY,percent of households living below federal poverty line
+PERCENT AGED 16+ UNEMPLOYED,percent aged 16+ unemployed
+PERCENT AGED 25+ WITHOUT HIGH SCHOOL DIPLOMA,percent aged 25+ who didnt graduate high school
+PERCENT AGED UNDER 18 OR OVER 64,percent aged under 18 or over 64 (dependants)
+PER CAPITA INCOME ,income per capita
+HARDSHIP INDEX,Score that incorporates each of the six selected socioeconomic indicators

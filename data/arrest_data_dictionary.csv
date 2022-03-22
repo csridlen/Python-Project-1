@@ -1,0 +1,11 @@
+Columns,Description
+ARR_DISTRICT,chicago police district where arrest took place
+ARR_BEAT,chicago police beat (patorl territory) where arrest took place
+ARR_YEAR,arrest year
+ARR_MONTH,arrest month
+RACE_CODE_CD,perceived race code of arrested
+FBI_CODE,crime type code reported to fbi
+STATUTE,statute that arrested person was charged with violating
+STAT_DESCR,statute description
+CHARGE_CLASS_CD,class of the charge
+CHARGE_TYPE_CD,level of charge (misdemeanor or felony)
