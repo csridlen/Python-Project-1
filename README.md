@@ -50,3 +50,10 @@ The code used for the analysis can be found [here](code/arrestdata.ipynb).
 The motivation was that for each police district, there might be more intense activities where the arrests happen more which might lead to increased numbers of potholes. As the arrest data was available for 2014-2017, I focused on the years of 2014-2017 in the potholes data. I grouped the data and counted all the arrests and created potholes in those years and plotted them by police districts.
 ![Plot 6](artifacts/arrests_and_potholes.png)
 Unfortunately, it does not seem they are closely correlated.
+
+## Analysis: OLS Regression
+To better understand the relation between our pothole data and other social factors, a regression analysis was used. Data wrangling on our main data set, census data, and crime statistics allowed to produce the necessary variables. The dependent variable in the first regression was total pothole density (count/km^2), and for the second it was average pothole service request completion time; both separated by community area. The regressors were average income, percentage of people below the poverty line, yearly crime expected rate, and population density (people/km^2); all by community area.
+The results for the first regression clearly indicate significant effects for crime rate, population density, and population below the poverty line. The latter, notably, is negative; this is possibly due to car ownership among empoverished people. The R-squared is fairly high at around 0.69 .
+![Output 1](artifacts/reg1.png)
+The results for the second regression indicate only a significant effect for population density, and a fairly low R-squared of about 0.16, indicating that contrarily to our intuition, the factors chose were not very relevant predictors of pothole servicing time.
+![Output 2](artifacts/reg2.png)
