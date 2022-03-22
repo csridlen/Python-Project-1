@@ -13,12 +13,6 @@ For this analysis, the main source of data contains potholes reported through 3-
 - [Census](data/census_data_dictionary.csv )
 - [Arrest](data/arrest_data_dictionary.csv)
 
-## Data Limitations and extensions
-We could not find recent data for the potholes in the Chicago area; 
-The were a lot of missing data in the Pothole dataset; 
-We could not find data on Chicago Area arrests for years 2010-2013 and 2018. So, we focused our pothole-arrest analysis on years 2014-2017; 
-Linkage of crashes to potholes through latitude and longitude and time stamps would be needed to provide a clearer methodology; 
-
 ## Analysis: Seasonality by Neighborhood 
 Before considering external influences, we need to understand what kind of general wear and tear likely causes potholes in Chicago. This analysis can be found [here](code/potholes_by_month.ipynb). The first bar plot below shows the total number of potholes created in each month. We can see that the top three months with potholes created are February, March, and April. The second bar plot below shows the month with the highest number of potholes created for each community area. Once again, we can see across the community areas that February, March, and April are the most common months with the most potholes created. This tells us that Chicago pothole are mostly created in the spring, which makes sense when we consider the hard winters that Chicago experiences and the damage created by the freezing, thawing, and plowing of the roads. 
 
@@ -72,3 +66,9 @@ The results for the second regression indicate only a significant effect for pop
 ## Conclusion
 
 Through our analysis we have explored the factors that generally influence road quality in the Chicago area from 2010 to 2018. We, unsurprisingly find that months coming from winter see most potholes created as compared to other months throghout the year. We find that certain neighborhoods within the Chicago Area had more potholes than others. However, we also realize that this may just be due to more pothole services being requested in those specific neighborhoods. Further, we look into the time it takes for potholes to be services,  and find that it takes much longer for the Northwest of Chicago poholes to be fixed than for other areas of Chicago. Our analysis shows that neighborhoods with higher income have longer completion time, which is counterintuitive.  We also look at any potential correlation between potholes and traffic crashes. We observe a positive correlation between potholes and traffic crashes for the Northwest and Southwest regions. We do not find any statistically significant correlation between the number of arrests and the number of potholes. Lastly, we run a regression analysis to show the relation between potholes with other social factors and we do not find any relevant predictors for pothole servicing time. 
+
+## Data Limitations and extensions
+We could not find recent data for the potholes in the Chicago area; 
+The were a lot of missing data in the Pothole dataset; 
+We could not find data on Chicago Area arrests for years 2010-2013 and 2018. So, we focused our pothole-arrest analysis on years 2014-2017; 
+Linkage of crashes to potholes through latitude and longitude and time stamps would be needed to provide a clearer methodology; 
