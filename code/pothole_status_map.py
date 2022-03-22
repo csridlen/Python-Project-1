@@ -4,19 +4,17 @@ import geopandas as gpd
 from geopandas import GeoDataFrame
 import matplotlib.pyplot as plt
 import shapefile
-import descartes
-
+import mplcursors
 
 # load and plot chicago zipcodes 
-zips = 'data/chicago_zipcodes.shp'
-# zips_geo = shapefile.Reader(zips).__geo_interface__
-# zips1 = gpd.read_file(zips)
-# zips1 = zips1.to_crs(epsg = 4326)
-map_zips = gpd.read_file(zips)
-fig,ax = plt.subplots(figsize = (15,15))
-zip_plot = map_zips.plot(ax = ax, color='grey', alpha = 0.4)
+zones = 'data/neighborhoods.shp'
 
-
+map_zones = gpd.read_file(zones)
+fig,ax = plt.subplots(figsize = (10,10))
+# map_zones.apply(lambda x: ax.annotate(text=x.pri_neigh, xy=x.geometry.centroid.coords[0], ha='center', fontsize=8),axis=1)
+map_zones.boundary.plot(ax = ax, color='white', linewidth = 1.0, alpha = 0.5)
+zone_plot = map_zones.plot(ax=ax, color='grey', alpha = 0.4)
+mplcursors.cursor(hover = True)
 
 # load pothold data and filter for missing points
 pot1 = pd.read_csv('data/potholes_1.csv')
@@ -36,13 +34,13 @@ opened_geo = [Point(xy) for xy in zip(opened['LONGITUDE'], opened['LATITUDE'])]
 opened_gdf = GeoDataFrame(opened, crs = crs, geometry=opened_geo)
 
 # plot crashes and potholes on zipcode map
-map2 = completed_gdf.plot(ax = ax, markersize = 10, color = 'grey', marker = 'o', label = 'Completed')
-map2 = opened_gdf.plot(ax = ax, markersize = 10, color = 'blue', marker = 'o', label = 'Open')
+map2 = completed_gdf.plot(ax = ax, markersize = 10, color = 'grey', alpha = 0.6, marker = 'o', label = 'Completed')
+map2 = opened_gdf.plot(ax = ax, markersize = 10, color = 'blue', alpha = 0.7, marker = 'o', label = 'Open')
 
 # save figure as png
 map2.set_title(label = 'Potholes by Status', fontsize = 24, loc = 'center')
 map2.legend(loc = 'upper left')
 mapf = map2.get_figure()
-mapf.savefig("artifacts/pothole_status_map.png")
-
+mapf.write_html("artifacts/pothole_status_by_neighborhood.html")
+mapf.savefig("artifacts/pothole_status_map.jpg")
   
