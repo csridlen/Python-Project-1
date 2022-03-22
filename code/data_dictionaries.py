@@ -46,3 +46,4 @@ crash_data_dictionary = pd.DataFrame.from_dict(crashes_dict)
 crash_data_dictionary.to_csv("data/crash_data_dictionary.csv", index=False)
 
 # detailed descriptions of omitted columns can be found https://data.cityofchicago.org/Transportation/Traffic-Crashes-Crashes/85ca-t3if
+
