@@ -48,7 +48,7 @@ Expanding on our analysis of income, we take a further look into how total potho
 
 ## Analysis: Potholes vs. Income for the Chicago Area
 To see the code for this part of the analysis, please refer to the following [link](Data_Cleaning/pothole_data/Pothole_data.ipynb). This uses `Pothole Data` from the Chicago area.
-I perform some simple data cleaning commands for the Potholes dataset by changing messy names of columns, sorting some of the variables by first name, and dropping duplicate values. I also replace missing values for the numerical columns with either the mean, mode, the zero value, or a pre-specified value. We check to make sure that none of the columns have any null entries in them. The I go ahead and perform some simple statistics for the pothole data to show the mean, standard deviation, min, max and the 25%, 50% and 75% quantiles for each variable in the dataset. We create a correlation table among variables in the dataset.  
+We perform some simple data cleaning commands for the Potholes dataset by changing messy names of columns, sorting some of the variables by first name, and dropping duplicate values. We also replace missing values for the numerical columns with either the mean, mode, the zero value, or a pre-specified value. We check to make sure that none of the columns have any null entries in them. The we perform some simple statistics for the pothole data to show the mean, standard deviation, min, max and the 25%, 50% and 75% quantiles for each variable in the dataset. We create a correlation table among variables in the dataset.  
 ![Table 1](artifacts/PotholeData_statistics.png)
 
 ## Analysis: Potholes vs. Traffic Crashes
@@ -68,8 +68,8 @@ The results for the first regression clearly indicate significant effects for cr
 The results for the second regression indicate only a significant effect for population density, and a fairly low R-squared of about 0.16, indicating that contrarily to our intuition, the factors chose were not very relevant predictors of pothole servicing time.
 ![Table 4](artifacts/reg2.png)
 
-We also look at the `Income Data` in the Chicago area by first merging it with the `Pothole Data`. I perform a simple regression between the `The Number of Potholes in Block` as the dependent variable and the `Per Capita Income` and `Hardship Index` as the independent variables. The result is the following
-In this table we see that a one unit increase in per capita income leads to a decrease of approximately 2.9 units in the number of potholes in the block, a coefficient which is statistically significant. Similarly, we see that a one unit increase in the hardship index leads to a decrease of approximately 0.001 in the number of potholes in the block, a coefficient which is nonetheless not statistically significant. The R-squared for this test, however, can be considered very low, so we need to be very careful drawing any reliable conclusions from it. 
+We also look at the `Income Data` in the Chicago area by first merging it with the `Pothole Data`. We perform a simple regression between the `The Number of Potholes in Block` as the dependent variable and the `Per Capita Income` and `Hardship Index` as the independent variables.
+In this table we can see that a one percent increase in per capita income leads to a decrease of approximately 2.9 units in the number of potholes in the block, a coefficient which is statistically significant. Similarly, we see that a one unit increase in the hardship index leads to a decrease of approximately 0.001 in the number of potholes in the block, a coefficient which is nonetheless not statistically significant. The R-squared for this test,  can be considered as very low, so we need to be very careful drawing any dependable conclusions from it. 
 
 ![Table 2](artifacts/pothole_income_regression.png)
 
