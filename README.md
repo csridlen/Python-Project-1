@@ -1,5 +1,16 @@
 # Chicago Potholes Data (2011 - 2018)
-Introduction
+
+## Introduction
+
+Intuition tells us that potholes are simply due to wear and tear of roads through general use over time. However, what if other external factors influence potholes and overall road quality? In this analysis, we seek to uncover what influences, outside of general wear and tear, affect road quality. We focus our analysis on Chicago, IL and explore the potential effect that income, neighborhood, traffic, and arrests have on potholes in the city. 
+
+Before considering external influences, we need to understand what kind of general wear and tear likely causes potholes in Chicago. This analysis can be found [here](code/potholes_by_month.ipynb). The first bar plot below shows the total number of potholes created in each month. We can see that the top three months with potholes created are February, March, and April. The second bar plot below shows the month with the highest number of potholes created for each community area. Once again, we can see across the community areas that February, March, and April are the most common months with the most potholes created. This tells us that Chicago pothole are mostly created in the spring, which makes sense when we consider the hard winters that Chicago experiences and the damage created by the freezing, thawing, and plowing of the roads. 
+
+![Plot 1](artifacts/counts_by_month.png)
+
+![Plot 2](artifacts/top_months.png)
+
+Now that we understand the seasonal cause of potholes in Chicago, we can explore how other factors may exacerbate this damage. 
 
 ## Data Collection
 For this analysis, the main source of data contains potholes reported through 3-1-1 service requests in the city of Chicago, IL from 2010 through 2018. The data was made available by the City of Chicago, along with data on traffic crashes reported through the electronic crash reporting system under the jurisdiction of the Chicago Police Department. Additionally, income data by neighborhood was sourced from the U.S. Census Bureau to analyze the correlation between pothole repairs and surrounding household residential income, and arrest data from the Chicago Police Department was used to investigate geographic relationships between density of potholes and surrounding area criminal activity.
@@ -29,6 +40,11 @@ In the following two plots, the per capita income of the neighborhoods with the 
 To further this analysis, a scatterplot was created with `Per Capita Income` on the x-axis and `Completion Time` on the y-axis: ![Plot 1](artifacts/income_scatter.png)
 In the scatterplot, the color scale is by number of potholes, with the darkest points having the fewest number of potholes and the lighest points having the most potholes in that community zone. We see that in areas with the lowest incomes, even having a smaller number of potholes than in richer areas results in a slower average completion time.
 
+Expanding on our analysis of income, we take a further look into how total potholes compares to per capita income in this [file](code/potholes_by_income.ipynb). While we have uncovered some of the relationship between pothole completion time and income, it is important to consider if total number of potholes in each area is correlated with income. After grouping the data by `Community Area`, we can total the number of potholes and compare that to the per capita income of the area.  From the bar plot below, we can see that as per capita income decreases, there is a subtle upward trend in number of potholes. This provides some visual evidence of a potential relationship between per capita income and potholes. 
+
+![Plot 5](artifacts/counts_by_income.png)
+
+
 ## Analysis: Potholes vs. Income for the Chicago Area
 To see the code for this part of the analysis, please refer to the following [link](Data_Cleaning/pothole_data/Pothole_data.ipynb). This uses `Pothole Data` from the Chicago area.
 I perform some simple data cleaning commands for the Potholes dataset by changing messy names of columns, sorting some of the variables by first name, and dropping duplicate values. I also replace missing values for the numerical columns with either the mean, mode, the zero value, or a pre-specified value. I check to make sure that none of the columns have any null entries in them. The I go ahead and perform some simple statistics for the pothole data to show the mean, standard deviation, min, max and the 25%, 50% and 75% quantiles for each variable in the dataset. I create a correlation table among variables in the dataset. Lastly, I create a scatterplot that shows the Number of Potholes in Block by Creation Date.  
@@ -37,17 +53,18 @@ I also look at the `Income Data` in the Chicago area by first merging it with th
 In this table we see that a one unit increase in per capita income leads to a decrease of approximately 2.9 units in the number of potholes in the block, a coefficient which is statistically significant. Similarly, we see that a one unit increase in the hardship index leads to a decrease of approximately 0.001 in the number of potholes in the block, a coefficient which is nonetheless not statistically significant.
 
 ![Table 1](artifacts/PotholeData_statistics.png)
-![Plot 5](artifacts/Scatter_plot.png)
+![Plot 6](artifacts/Scatter_plot.png)
 ![Table 2](artifacts/pothole_income_regression.png).
+
 
 ## Analysis: Potholes vs. Traffic Crashes
 In this analysis, we attempt to visualize the density of potholes and traffic crashes due to road defects. The traffic crash data was obtained from the City of Chicago and the Chicago Police Department and was filtered to only include crashes during the 2010 - 2018 timeframe that were caused by rut or hole road defects. These were then plotted alongside potholes (both open and completed) over the neighborhood map. From the plot below, we can see that certain neighborhoods, particularly in the Northwest and Southwest regions, have a high percentage of both potholes and traffic crashes, ostensibly a significant portion of which were directly caused by potholes. Further rigorous analysis including linkage of crashes to potholes through latitude and longitude and time stamps would provide a clearer methodology to investigate how potholes affect public health across neighborhoods.  
-![Plot 6](artifacts/dualmap.png)
+![Plot 7](artifacts/dualmap.png)
 
 ## Analysis: Potholes vs. Arrests in the Chicago Area
 The code used for the analysis can be found [here](code/arrestdata.ipynb).
 The motivation was that for each police district, there might be more intense activities where the arrests happen more which might lead to increased numbers of potholes. As the arrest data was available for 2014-2017, I focused on the years of 2014-2017 in the potholes data. I grouped the data and counted all the arrests and created potholes in those years and plotted them by police districts.
-![Plot 6](artifacts/arrests_and_potholes.png)
+![Plot 8](artifacts/arrests_and_potholes.png)
 Unfortunately, it does not seem they are closely correlated.
 
 ## Analysis: OLS Regression
