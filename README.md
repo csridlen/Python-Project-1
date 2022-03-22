@@ -16,7 +16,7 @@ For this analysis, the main source of data contains potholes reported through 3-
 - [Potholes](data/potholes_data_dictionary.csv)
 - [Traffic Crashes](data/crash_data_dictionary.csv)
 - [Census](data/census_data_dictionary.csv )
-- [Arrest](data/arrest_data_dictionary)
+- [Arrest](data/arrest_data_dictionary.csv)
 
 ## Analysis: Pothole Status by Neighborhood
 To visualize pothole service request status geographically, a map was created plotting open versus completed pothole requests in the Chicago area. A basemap of Chicago neighborhoods was used to analyze any correlation and provide visual context to the income analysis explore below. As seen on the map, there do appear to be neighborhoods with a higher ratio of open to closed pothole service requests, although more rigorous analysis is needed to determine an exact relationship. For example, a neighborhood may appear to have a higher concentration of open requests, however, due to the sheer volume of completed requests over the time frame, it is difficult to visually determine the true ratio.
