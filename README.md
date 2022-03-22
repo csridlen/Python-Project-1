@@ -1,13 +1,5 @@
-# Chicago Potholes Data (2011 - 2017)
-Requirements for reporting your analysis:
-
-The goal of the analysis is must be clearly articulated
-The report must include your methodology
-The report must include a description of your project and its findings (or lack of findings)
-Your findings (or non-findings) must be clearly documented
-The limitations of the analysis must be clearly outlined
-Extensions of your analysis or areas for more research must be included in your report
-You should not include analysis, plots, discoveries, that aren’t directly related to your findings – you can put them as an appendix in another file if you like
+# Chicago Potholes Data (2011 - 2018)
+Introduction
 
 ## Data Collection
 For this analysis, the main source of data contains potholes reported through 3-1-1 service requests in the city of Chicago, IL from 2010 through 2018. The data was made available by the City of Chicago, along with data on traffic crashes reported through the electronic crash reporting system under the jurisdiction of the Chicago Police Department. Additionally, income data by neighborhood was sourced from the U.S. Census Bureau to analyze the correlation between pothole repairs and surrounding household residential income, and arrest data from the Chicago Police Department was used to investigate geographic relationships between density of potholes and surrounding area criminal activity.
@@ -64,3 +56,6 @@ The results for the first regression clearly indicate significant effects for cr
 ![Output 1](artifacts/reg1.png)
 The results for the second regression indicate only a significant effect for population density, and a fairly low R-squared of about 0.16, indicating that contrarily to our intuition, the factors chose were not very relevant predictors of pothole servicing time.
 ![Output 2](artifacts/reg2.png)
+
+## Conclusion
+
